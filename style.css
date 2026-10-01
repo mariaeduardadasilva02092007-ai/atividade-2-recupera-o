@@ -1,0 +1,136 @@
+:root {
+    --fundo: #080d20;
+    --cartao: #151b3d;
+    --roxo: #6c63ff;
+    --azul: #328ed8;
+    --azul-claro: #8fd3ff;
+    --branco: #ffffff;
+    --texto: #d7dcff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #080d20,
+        #1b1760,
+        #174c91
+    );
+
+    font-family: Arial, sans-serif;
+    color: var(--branco);
+}
+
+.card {
+    width: 100%;
+    max-width: 360px;
+
+    margin: 20px;
+    padding: 30px;
+
+    background-color: var(--cartao);
+
+    border: 1px solid var(--roxo);
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+    text-align: center;
+}
+
+.card__avatar {
+    width: 120px;
+    height: 120px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 4px solid var(--azul-claro);
+
+    box-shadow: 0 0 20px rgba(108, 99, 255, 0.6);
+}
+
+.card__name {
+    margin: 18px 0 5px;
+}
+
+.card__role {
+    color: var(--azul-claro);
+    font-weight: bold;
+}
+
+.card__bio {
+    color: var(--texto);
+    line-height: 1.5;
+}
+
+.card__tags {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 0;
+    margin: 20px 0;
+
+    list-style: none;
+}
+
+.card__tags li {
+    padding: 7px 11px;
+
+    background-color: #242b5c;
+    color: var(--azul-claro);
+
+    border: 1px solid var(--roxo);
+    border-radius: 10px;
+
+    font-size: 14px;
+}
+
+.card__btn {
+    display: inline-block;
+
+    padding: 11px 22px;
+
+    background: linear-gradient(
+        90deg,
+        var(--roxo),
+        var(--azul)
+    );
+
+    color: var(--branco);
+
+    text-decoration: none;
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.card__btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.5);
+}
+
+@media (max-width: 480px) {
+
+    .card {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    .card__avatar {
+        width: 100px;
+        height: 100px;
+    }
+}
